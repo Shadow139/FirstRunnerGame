@@ -69,14 +69,23 @@ public class Game extends JPanel implements Runnable {
 
     @Override
     public void run() {
+        long updateDuration = 0;
+        long sleepDuration = 0;
+
         while (running){
+            long beforeUpdateRender = System.nanoTime();
+
             //System.out.println("" + currentState.getClass());
             currentState.update();
             prepareGameImage();
             currentState.render(gameImage.getGraphics());
             repaint();
+
+            updateDuration = (System.nanoTime() - beforeUpdateRender)/ 1000000L;
+            sleepDuration = Math.max(2,17-updateDuration);
+
             try {
-                Thread.sleep(14);
+                Thread.sleep(sleepDuration);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
