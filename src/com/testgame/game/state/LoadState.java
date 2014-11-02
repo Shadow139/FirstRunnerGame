@@ -18,7 +18,7 @@ public class LoadState extends State {
     }
 
     @Override
-    public void update() {
+    public void update(float delta) {
         System.out.println("LoadState: Changing to MenuState!");
         setCurrentState(new MenuState());
     }
