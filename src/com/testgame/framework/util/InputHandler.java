@@ -15,7 +15,7 @@ public class InputHandler implements KeyListener, MouseListener {
     private State currentState;
 
     public void setCurrentState(State state){
-        this.currentState =currentState;
+        this.currentState = state;
     }
 
     @Override
