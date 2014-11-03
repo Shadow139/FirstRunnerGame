@@ -44,7 +44,7 @@ public class Game extends JPanel implements Runnable {
 
     public void setCurrentState(State newState) {
         System.out.println("Changing State!");
-        System.gc();
+        //System.gc();
         currentState = newState;
         newState.init();
         inputHandler.setCurrentState(currentState);

@@ -49,7 +49,7 @@ public class Player {
 
         }
 
-        y += velY * delta;
+        //y += velY * delta;
         updateRectangles();
     }
 
@@ -70,7 +70,7 @@ public class Player {
         }
     }
 
-    private boolean isGrounded() {
+    public boolean isGrounded() {
         return rectangleJumping.intersects(ground);
     }
 

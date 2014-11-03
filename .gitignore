@@ -26,3 +26,7 @@ out/production/FirstRunnerGame/com/testgame/framework/util/RandomNumberGenerator
 out/production/FirstRunnerGame/com/testgame/framework/animation/Animation.class
 out/production/FirstRunnerGame/com/testgame/framework/animation/Frame.class
 out/production/FirstRunnerGame/com/testgame/game/model/Player.class
+out/production/FirstRunnerGame/com/testgame/game/model/Block.class
+out/production/FirstRunnerGame/com/testgame/game/model/Cloud.class
+out/production/FirstRunnerGame/com/testgame/game/state/GameOverState.class
+out/production/FirstRunnerGame/com/testgame/game/state/PlayState.class
