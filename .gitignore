@@ -23,3 +23,6 @@ out/production/FirstRunnerGame/com/testgame/game/state/LoadState.class
 out/production/FirstRunnerGame/com/testgame/game/state/MenuState.class
 out/production/FirstRunnerGame/com/testgame/game/state/State.class
 out/production/FirstRunnerGame/com/testgame/framework/util/RandomNumberGenerator.class
+out/production/FirstRunnerGame/com/testgame/framework/animation/Animation.class
+out/production/FirstRunnerGame/com/testgame/framework/animation/Frame.class
+out/production/FirstRunnerGame/com/testgame/game/model/Player.class
