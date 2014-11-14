@@ -11,7 +11,7 @@ public class Player {
     private float x,y;
     private int width,height,velY;
     private Rectangle rectangleJumping,rectangleDucking,ground;
-    
+
     private boolean isAlive;
     private boolean isDucked;
     private float duckDuration = .6f;
@@ -24,8 +24,8 @@ public class Player {
         this.y = y;
         this.width = width;
         this.height = height;
-        
-        ground = new Rectangle(0,405,800,45);
+
+        ground = new Rectangle(0,404,800,45);
         rectangleJumping = new Rectangle();
         rectangleDucking = new Rectangle();
         isAlive = true;
@@ -42,14 +42,15 @@ public class Player {
         }
 
         if(!isGrounded()){
-            velY =(int)(ACCEL_GRAVITY * delta);
+            velY += (int)(ACCEL_GRAVITY * delta);
         }else{
-            velY = 406-height;
+            y = 406-height;
             velY = 0;
 
         }
 
-        //y += velY * delta;
+        y += velY * delta;
+        System.out.println("" + (velY * delta));
         updateRectangles();
     }
 

@@ -47,7 +47,10 @@ public class MenuState extends State {
     public void onKeyPress(KeyEvent e) {
         int key = e.getKeyCode();
 
-        if(key == KeyEvent.VK_ENTER){
+        if(key == KeyEvent.VK_ESCAPE){
+            GameMain.game.exit();
+        }
+        if(key == KeyEvent.VK_ENTER || key == KeyEvent.VK_SPACE){
             if(currentSelection == 0){
                 setCurrentState(new PlayState());
             }else if(currentSelection == 1){

@@ -56,8 +56,13 @@ public class PlayState extends State {
         //System.out.println("Y: " + player.getY());
         System.out.println("Ducked: " + player.isDucked());
         System.out.println("isGrounded: " + player.isGrounded());
+       // System.out.println("PlayerRectangleJumping : \n" +
+       //         "x: " + player.getRectangleJumping().getX() + "  :  y: " + player.getRectangleJumping().getY() +
+       //         "width: " + player.getRectangleJumping().getWidth() + "  :  height: " + player.getRectangleJumping().getHeight());
 
-
+       // System.out.println("GroundRectangle : \n" +
+        //        "x: " + player.getGround().getX() + "  :  y: " + player.getGround().getY() +
+        //        "width: " + player.getGround().getWidth() + "  :  height: " + player.getGround().getHeight());
 
         //System.out.println("Width: " + player.getWidth());
         //System.out.println("Height: " + player.getHeight());
@@ -98,12 +103,12 @@ public class PlayState extends State {
     @Override
     public void render(Graphics g) {
         g.setColor(Resources.skyBlue);
-        g.fillRect(0,0,GameMain.GAME_WIDTH,GameMain.GAME_HEIGHT);
+        g.fillRect(0, 0, GameMain.GAME_WIDTH, GameMain.GAME_HEIGHT);
         renderPlayer(g);
         renderBlocks(g);
         renderSun(g);
         renderClouds(g);
-        g.drawImage(Resources.grass,0,405,null);
+        g.drawImage(Resources.grass, 0, 405, null);
         renderScore(g);
 
     }
@@ -154,6 +159,10 @@ public class PlayState extends State {
 
     @Override
     public void onKeyPress(KeyEvent e) {
+        if(e.getKeyCode() == KeyEvent.VK_ESCAPE){
+            setCurrentState(new MenuState());
+        }
+
         if(e.getKeyCode() == KeyEvent.VK_SPACE || e.getKeyCode() == KeyEvent.VK_UP){
             System.out.println("jump pressed");
             player.jump();
